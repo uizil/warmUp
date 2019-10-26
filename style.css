@@ -1,0 +1,16 @@
+body {
+	background-color: blue;
+	margin: 15px;
+}
+
+#button1 {
+	font-family: monospace;
+}
+
+#button2 {
+	font-family: cursive;
+}
+footer {
+	margin: 20px;
+	background-color: grey;
+}
