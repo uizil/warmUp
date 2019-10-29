@@ -4,18 +4,28 @@
 //              array: [ 2, 3, 3, "a" ],  sub:[ 3, 3, 3, "a" ] => false
 
 
-function subset(array, sub) {
-	var sub1 = []; 
-	
+
+
+
+
+
+
+function rec(x, array) {
 	for(var i = 0; i < array.length; i++) {
-		
-		for (var j = 0; j < sub.length; j++){
+		if(x === array[i]) {
 			
-			if(array[i] === sub[j]){
-				sub1.push(1);
-			}
+			return true;
 		}
 	}
-	
-	return sub1.length === sub.length;
+	return false;
+}
+
+function subset(array, sub) {
+	for(var i = 0; i < sub.length; i++) {
+    	if(rec(sub[i], array) === false) {
+			return false;
+		}
+
+	}
+	return true;
 }
