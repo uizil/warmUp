@@ -1,12 +1,12 @@
 //$('button').css('color','red')
-var bool;
+
 $('#right').on('click', function() {
 	
-	bool = false;
+
 	$('#creat').on('click', function() {
-		if (bool === false) {
-			$('#ul-right').append('<li>button Right was clicked</li>');
-		}
+		
+			$('<li>button Right was clicked</li>').appendTo('#ul-right');
+		
 	});
 });
 
@@ -19,3 +19,23 @@ $('#left').on('click', function() {
 		}
 	});
 });
+
+/*
+function clickRigt() {
+	$('#creat').on('click', function() {
+
+		$('<li>button Right was clicked</li>').appendTo('#ul-right');
+});
+}
+*/
+/*
+function clickLeft() {
+	$('#creat').on('click', function() {
+
+		$('<li>button Left was clicked</li>').appendTo('#ul-left');
+});
+}
+
+$('#creat').on('click', clickLeft());
+//$('#creat').on('click', clickRigt());
+*/
