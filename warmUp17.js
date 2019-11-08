@@ -27,6 +27,25 @@
 
 // ​
 // ​
-// var calculateTime = function(keyboard, word) {
-    
-// };
+var calculateTime = function(keyboard, word) {
+	count = 0;
+	previousPosition = 0;
+	for(var i = 0; i < word.length; i++){
+		char = word[i];
+		for(var j = 0; j < keyboard.length; j++) {
+			if(keyboard[j] === char){
+				if (j - previousPosition < 0) {
+				count += - (j - previousPosition)
+			} else {
+				count += j - previousPosition; 
+			}
+			console.log(count);
+			previousPosition = j;
+			}
+			
+		}
+	}
+	return count;
+};
+
+
