@@ -6,7 +6,23 @@
 // Examples:
 
 // input   =  "Hello, World!"
-// result  =  "1112111121311"
+// result  =  "1112111121311" 
+
 
 // input   =  "aaaaaaaaaaaa"
 // result  =  "123456789101112"
+
+function count(str) {
+	var result = '';
+	var count = 0;
+	for(var i = 0; i < str.length; i++) {
+		count = 0;
+		for(var j = i; j >= 0; j --){
+			if(str[i] === str[j]){
+				count++;
+			}
+		}
+	result += count;
+	}
+	return result;
+}
